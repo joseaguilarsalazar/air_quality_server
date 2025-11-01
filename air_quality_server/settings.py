@@ -33,12 +33,18 @@ SECRET_KEY = 'django-insecure-05qcwkkz^qo7pxf4kq^^jd1w27*)feu9jv7buy5&y71)*dtr^$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = [
-    'http://localhost:8000',
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    "air_quality.mishu-soft.org",
 ]
-CORS_ALLOW_CREDENTIALS =True
+CSRF_TRUSTED_ORIGINS = [
+    "https://air_quality.mishu-soft.org",
+    "http://localhost:8000",
+]
+
 CORS_ALLOWED_ORIGINS = [
+    "https://air_quality.mishu-soft.org",
     "http://localhost:3000",
     "http://localhost:5173",
 ]
