@@ -1,14 +1,12 @@
-version: '3.9'
-
 services:
   db:
     image: postgres:16
     container_name: postgres_db
     restart: always
     environment:
-      POSTGRES_DB: air_quality_db
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: mydatabase
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
@@ -20,15 +18,15 @@ services:
     volumes:
       - .:/app
     ports:
-      - "8005:8005"
+      - "8000:8000"
     depends_on:
       - db
     environment:
-      - DB_NAME=air_quality_db
-      - DB_USER=postgres
-      - DB_PASSWORD=1234
-      - DB_HOST=localhost
-      - DB_PORT=5432
+      - DATABASE_URL=postgresql://myuser:mypassword@db:5432/mydatabase
       - DJANGO_SUPERUSER_USERNAME=admin
       - DJANGO_SUPERUSER_EMAIL=admin@example.com
       - DJANGO_SUPERUSER_PASSWORD=admin123
+
+# 👇 Define the volume at the root level
+volumes:
+  postgres_data:
