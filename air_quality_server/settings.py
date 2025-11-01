@@ -36,15 +36,15 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    "air_quality.mishu-soft.org",
+    "air-quality.mishu-soft.org",
 ]
 CSRF_TRUSTED_ORIGINS = [
-    "https://air_quality.mishu-soft.org",
+    "https://air-quality.mishu-soft.org",
     "http://localhost:8000",
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "https://air_quality.mishu-soft.org",
+    "https://air-quality.mishu-soft.org",
     "http://localhost:3000",
     "http://localhost:5173",
 ]
