@@ -37,10 +37,12 @@ ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
     "air-quality.mishu-soft.org",
+"air-quality-server.w0br5o.easypanel.host",
 ]
 CSRF_TRUSTED_ORIGINS = [
     "https://air-quality.mishu-soft.org",
     "http://localhost:8000",
+"https://air-quality-server.w0br5o.easypanel.host",
 ]
 
 CORS_ALLOWED_ORIGINS = [
